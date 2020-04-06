@@ -11,9 +11,8 @@ dunst &
 thunar --daemon &
 numlockx &
 xsettingsd &
-# pulseaudio --start &
-mpd &
 /usr/lib/xfce-polkit/xfce-polkit &
+gnome-keyring-daemon --start --components=pkcs11 &
 nm-applet &
 redshift-gtk &
 xfce4-power-manager &
@@ -22,7 +21,7 @@ udiskie -t &
 # greenclip daemon &
 clipit &
 jgmenu_run start &
-unclutter &
+# unclutter &
 # telegram-desktop &
 
 sxhkd &
