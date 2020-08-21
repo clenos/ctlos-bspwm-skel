@@ -9,9 +9,9 @@ $HOME/.config/bspwm/polybar/launch.sh &
 tint2 -c ~/.config/tint2/tray.tint2rc &
 dunst &
 thunar --daemon &
-numlockx &
+# numlockx &
 xsettingsd &
-/usr/lib/xfce-polkit/xfce-polkit &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 gnome-keyring-daemon --start --components=pkcs11 &
 nm-applet &
 redshift-gtk &
@@ -19,7 +19,8 @@ xfce4-power-manager &
 # caffeine &
 udiskie -t &
 # greenclip daemon &
-clipit &
+# clipit &
+parcellite &
 jgmenu_run start &
 # unclutter &
 # telegram-desktop &
