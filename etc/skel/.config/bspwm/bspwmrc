@@ -4,6 +4,8 @@ bspc monitor -d I II III IV V VI VII VIII IX X
 
 . "${HOME}/.config/bspwm/color"
 
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
+
 bspc config border_width         2
 bspc config normal_border_color "$color8"
 bspc config active_border_color "$color7"
@@ -38,6 +40,7 @@ bspc desktop ^10 -l monocle
 bspc rule -a URxvt:Tiled desktop='^1' follow=on
 bspc rule -a URxvt:Tmux desktop='^1' follow=on
 bspc rule -a Chromium desktop='^2'
+bspc rule -a firefox desktop='^2'
 bspc rule -a Subl3 desktop='^3'
 # bspc rule -a Thunar desktop='^4' state=pseudo_tiled
 bspc rule -a Thunar desktop='^4' follow=on focus=on

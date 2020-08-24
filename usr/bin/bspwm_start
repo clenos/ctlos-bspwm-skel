@@ -25,5 +25,4 @@ jgmenu_run start &
 # unclutter &
 # telegram-desktop &
 
-sxhkd &
 bspwm
