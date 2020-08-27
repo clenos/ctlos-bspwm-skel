@@ -1,17 +1,19 @@
-#!/bin/sh
+#! /bin/sh
 
-#### autostarting applications bspwm
+run() { ! pgrep -x "$1" >/dev/null && "$@&"; }
+
 xsetroot -cursor_name left_ptr &
 setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
 picom -b --config $HOME/.config/picom.conf &
 # hsetroot -fill /usr/share/wall/ctld.png &
-nitrogen --restore &
+run nitrogen --restore &
+run sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 if [ "$(which polybar)" != "polybar not found" ]; then
   $HOME/.config/bspwm/polybar/launch.sh &
   # (sleep 2; sh ~/.bin/phide.sh) &
 fi
-tint2 -c $HOME/.config/tint2/tray.tint2rc &
-dunst &
+run tint2 -c $HOME/.config/tint2/tray.tint2rc &
+run dunst &
 if [ "$(which thunar)" != "thunar not found" ]; then
   thunar --daemon &
 fi
@@ -19,16 +21,16 @@ fi
 xsettingsd &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 gnome-keyring-daemon --start --components=pkcs11 &
-nm-applet &
-# redshift-gtk &
-xfce4-power-manager &
-# caffeine &
-udiskie -t &
-# greenclip daemon &
-# clipit &
-parcellite &
-jgmenu_run start &
-# unclutter &
-# telegram-desktop &
 
-bspwm
+# greenclip daemon &
+
+run jgmenu_run start &
+run nm-applet &
+# run redshift-gtk &
+run xfce4-power-manager &
+# run caffeine &
+run udiskie -t &
+# run clipit &
+run parcellite &
+# run unclutter &
+# run telegram-desktop &

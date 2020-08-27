@@ -42,11 +42,11 @@ super + ctrl + p
   polybar-msg cmd toggle
 
 # betterlockscreen -u path/to/directory -r 1920x1080 -b 0.5
-# super + Delete
-#   betterlockscreen -l blur
-
 super + Delete
-  i3lock-fancy
+  betterlockscreen -l blur
+
+# super + Delete
+  # i3lock-fancy
 
 # betterlockscreen -s blur
 super + alt + Delete

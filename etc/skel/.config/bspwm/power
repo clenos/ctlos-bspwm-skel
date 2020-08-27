@@ -7,7 +7,8 @@ sleep 1;
 
 if [ "$DIALOG_RESULT" = "Lock" ];
 then
-    exec i3lock-fancy
+    # exec i3lock-fancy
+    exec betterlockscreen -l blur
 elif [ "$DIALOG_RESULT" = "Quit bspwm" ];
 then
     exec bspc quit
