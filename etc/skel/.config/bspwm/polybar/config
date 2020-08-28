@@ -110,7 +110,7 @@ exec = ~/.config/bspwm/polybar/uparch.sh
 interval = 600
 format-prefix = " "
 format-prefix-foreground = ${colors.accent}
-click-left = "urxvt -name Pacui -e pacui &"
+click-left = "urxvt -name Pacui -e ~/.bin/pacui &"
 
 
 
