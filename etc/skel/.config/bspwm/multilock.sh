@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMG=$HOME/.wall/wl.png
+IMG=/usr/share/wall/wl.png
 
 if [[ `which multilockscreen` != 'multilockscreen not found' ]]; then
   if [[ ! -d $HOME/.cache/multilock ]]; then
