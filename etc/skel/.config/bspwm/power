@@ -9,14 +9,14 @@
 # if [ "$DIALOG_RESULT" = "Заблокировать" ];
 # then
 #     # exec i3lock-fancy
-#     exec ./multilock.sh -l blur
+#     exec $HOME/.config/bspwm/multilock.sh -l blur
 # elif [ "$DIALOG_RESULT" = "Выйти из bspwm" ];
 # then
 #     exec bspc quit
 # elif [ "$DIALOG_RESULT" = "Сон с блокировкой" ];
 # then
 #     # exec systemctl suspend
-#     exec ./multilock.sh -s blur
+#     exec $HOME/.config/bspwm/multilock.sh -s blur
 # elif [ "$DIALOG_RESULT" = "Гибернация" ];
 # then
 #     exec systemctl hibernate
@@ -41,14 +41,14 @@ sleep 1;
 if [ "$DIALOG_RESULT" = "Lock" ];
 then
     # exec i3lock-fancy
-    exec ./multilock.sh -l blur
+    exec $HOME/.config/bspwm/multilock.sh -l blur
 elif [ "$DIALOG_RESULT" = "Quit bspwm" ];
 then
     exec bspc quit
 elif [ "$DIALOG_RESULT" = "Suspend Lock" ];
 then
     # exec systemctl suspend
-    exec ./multilock.sh -s blur
+    exec $HOME/.config/bspwm/multilock.sh -s blur
 elif [ "$DIALOG_RESULT" = "Hibernate" ];
 then
     exec systemctl hibernate
