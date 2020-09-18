@@ -41,14 +41,14 @@ alt + r
 super + ctrl + p
   polybar-msg cmd toggle
 
-# betterlockscreen -u path/to/directory -r 1920x1080 -b 0.5
+# multilockscreen -u path/to/directory -b 0.5
 super + Delete
-  betterlockscreen -l blur
+  sh -c "$HOME/.config/bspwm/multilock.sh -l blur"
 
 # super + Delete
   # i3lock-fancy
 
-# betterlockscreen -s blur
+# multilockscreen -s blur
 super + alt + Delete
   sh -c "$HOME/.config/bspwm/power"
 
