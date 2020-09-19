@@ -1,6 +1,6 @@
 #! /bin/sh
 
-run() { ! pgrep -x "$1" >/dev/null && "$@&"; }
+run() { ! pgrep -x "$1" >/dev/null && "$@"; }
 
 xsetroot -cursor_name left_ptr &
 setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &

@@ -1,3 +1,4 @@
 #!/bin/bash
 #
-betterlockscreen -l blur
+
+$HOME/.config/bspwm/multilock.sh -l blur

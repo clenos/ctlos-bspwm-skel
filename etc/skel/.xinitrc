@@ -37,5 +37,4 @@ xset b off
 # xset fp rehash &
 # fc-cache -fv &
 
-### bspwm autostart
-/usr/bin/bspwm_start
+exec bspwm
