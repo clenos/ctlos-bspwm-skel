@@ -2,13 +2,17 @@
 # wm independent hotkeys
 #
 
+# show help on key bindings
+super + F1
+  $HOME/.config/bspwm/bspwmfloat urxvt -name Float -e ~/.config/bspwm/show_keys
+
 # terminal emulator
 super + Return
   urxvt
 
 # program launcher
 super + @space
-  dmenu_run
+  rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
