@@ -5,6 +5,7 @@ bspc monitor -d I II III IV V VI VII VIII IX X
 . "${HOME}/.config/bspwm/color"
 
 $HOME/.config/bspwm/autostart.sh
+wmname LG3D &
 
 bspc config border_width         2
 bspc config normal_border_color "$color8"
